@@ -56,7 +56,6 @@ jobs:
         run: |
           python -m venv .venv
           source .venv/bin/activate
-          cd backend
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
@@ -69,4 +68,5 @@ jobs:
 
       - name: Zappa update
         run: |
+          source .venv/bin/activate
           zappa update dev
