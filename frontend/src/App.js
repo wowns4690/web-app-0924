@@ -4,7 +4,7 @@ const App = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/data')
+    fetch('https://b0h5up5xl2.execute-api.ap-northeast-2.amazonaws.com/dev/api/data')
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));
